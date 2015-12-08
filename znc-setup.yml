@@ -1,0 +1,24 @@
+- name: Setup znc daemon for OSIC
+  hosts: all
+  roles:
+    - ansible-znc-on-znc
+  vars:
+    # By default we will run znc as the same user/group Ansible uses to
+    # connect to the system.  If you prefer to specify a different
+    # user/group or if Ansible uses the root user you can specify the
+    # user/group to run znc.  To run znc as the user 'znc' and group 'znc'
+    # uncomment the following two lines:
+    znc_system_user: znc
+    znc_system_group: znc
+    # znc_user and znc_server_passwords can go into a vault-encrypted file.
+    znc_user:
+      name: znc
+      hash: <PUT YOUR HASH VALUE HERE. CREATE IT USING 'znc --makeconf'>
+      method: <PUT THE METHOD HERE>
+      salt: <PUT THE SALT VALUE HERE>
+      password: <PUT THE PLAIN TEXT PASSWORD HERE>
+    # The remaining values are safe to leave in the playbook in clear text.
+    znc_base_port: 65533
+    znc_nick: znc
+    znc_quit_msg: disconnecting
+    znc_real_name: OSIC ZNC

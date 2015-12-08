@@ -1,0 +1,3 @@
+[submodule "roles/ansible-znc-on-znc"]
+	path = roles/ansible-znc-on-znc
+	url = https://github.com/ganeshmaharaj/ansible-znc-on-znc.git

@@ -1,4 +1,4 @@
-- name: Setup znc daemon for OSIC
+- name: Setup znc daemon for a shared server
   hosts: all
   roles:
     - ansible-znc-on-znc
@@ -21,4 +21,4 @@
     znc_base_port: 65533
     znc_nick: znc
     znc_quit_msg: disconnecting
-    znc_real_name: OSIC ZNC
+    znc_real_name: ZNC Master

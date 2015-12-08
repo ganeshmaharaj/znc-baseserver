@@ -8,7 +8,7 @@ up their own server & configuring everything. Also wanted to use this as a reaso
 ## How?
 1. Create a VPS server
 2. Create username znc
-3. sudo apt-get insstall python-apt python-pycurl
+3. ```sudo apt-get install python-apt python-pycurl```
 4. If you are installing locally, edit /etc/ansible/hosts and add the below line
   * ```localhost ansible_connections=local```
 5. Run the playbook. This will install znc

@@ -10,7 +10,7 @@ up their own server & configuring everything. Also wanted to use this as a reaso
 2. Create username znc
 3. ```sudo apt-get install python-apt python-pycurl```
 4. If you are installing locally, edit /etc/ansible/hosts and add the below line
-  * ```localhost ansible_connections=local```
+  * ```localhost ansible_connection=local```
 5. Run the playbook. This will install znc
 6. Run ```znc --makepass``` & edit the znc-setup.yml file with the respective data
 7. Run setup again
